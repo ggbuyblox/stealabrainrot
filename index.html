@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loja Los Combinaciones</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: black;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    /* Tela de loading */
+    #loading {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 28px;
+      color: gold;
+      z-index: 10;
+    }
+
+    #app {
+      display: none;
+      text-align: center;
+      border: 3px solid gold;
+      border-radius: 15px;
+      padding: 20px;
+      max-width: 400px;
+    }
+
+    img {
+      max-width: 100%;
+      border-radius: 10px;
+      border: 2px solid gold;
+    }
+
+    h2 {
+      margin: 15px 0 5px;
+    }
+
+    .price {
+      font-size: 20px;
+      color: gold;
+      margin-bottom: 15px;
+    }
+
+    button {
+      background: gold;
+      color: black;
+      border: none;
+      padding: 12px 20px;
+      margin-top: 10px;
+      font-size: 16px;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    button:hover, button:active {
+      transform: scale(1.1);
+    }
+
+    #payment {
+      margin-top: 20px;
+      display: none;
+      text-align: left;
+    }
+
+    .highlight {
+      color: gold;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <!-- Loading -->
+  <div id="loading">Carregando...</div>
+
+  <!-- App -->
+  <div id="app">
+    <h2>Los Combinaciones</h2>
+    <img src="Los-Combinaciones-Steal-a-Brainrot-15m-S.webp" alt="Los Combinaciones">
+    <p class="price">Preço: $19</p>
+    <button onclick="showPayment()">Comprar</button>
+
+    <div id="payment">
+      <h3>Formas de Pagamento:</h3>
+      <p>Pix - Chave: <span class="highlight">81993791246</span></p>
+
+      <h3>Formas de Comunicação:</h3>
+      <p>Email: <span class="highlight">massilonfilgueiraa@gmail.com</span></p>
+    </div>
+  </div>
+
+  <script>
+    // Simula loading de 2 segundos
+    window.onload = function() {
+      setTimeout(() => {
+        document.getElementById("loading").style.display = "none";
+        document.getElementById("app").style.display = "block";
+      }, 2000);
+    }
+
+    // Mostra pagamento
+    function showPayment() {
+      document.getElementById("payment").style.display = "block";
+    }
+  </script>
+</body>
+</html>
